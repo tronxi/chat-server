@@ -1,0 +1,766 @@
+[INFO ] - 2020-12-26/00:17:17 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3211 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/00:17:17 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/00:17:19 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/00:17:19 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/00:17:20 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7e49ded' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/00:17:20 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/00:17:20 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/00:17:20 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/00:17:20 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/00:17:20 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/00:17:20 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/00:17:20 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2668 ms
+[INFO ] - 2020-12-26/00:17:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/00:17:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/00:17:20 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/00:17:21 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/00:17:21 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/00:17:21 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/00:17:21 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/00:17:22 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/00:17:22 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/00:17:22 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/00:17:23 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/00:17:23 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a106b26, org.springframework.security.web.context.SecurityContextPersistenceFilter@25cef4b3, org.springframework.security.web.header.HeaderWriterFilter@439054a7, org.springframework.web.filter.CorsFilter@445d878c, org.springframework.security.web.authentication.logout.LogoutFilter@24347d8b, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@748fa354, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@66450129, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bdef8ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77da2881, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16eca98a, org.springframework.security.web.session.SessionManagementFilter@535adf36, org.springframework.security.web.access.ExceptionTranslationFilter@685e5967]
+[INFO ] - 2020-12-26/00:17:23 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/00:17:24 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/00:17:24 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/00:17:24 - com.tronxi.chat.ChatApplication - Started ChatApplication in 8.165 seconds (JVM running for 10.504)
+[INFO ] - 2020-12-26/00:17:25 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/00:17:25 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/00:17:25 - o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[INFO ] - 2020-12-26/00:17:51 - c.t.c.i.a.r.c.LoginController - Login user with name sergio
+[INFO ] - 2020-12-26/00:17:54 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[INFO ] - 2020-12-26/00:17:55 - c.t.c.d.u.CreateConversationUseCase - saved conversation with id a2ec831d-1318-4577-aaf7-267db692e16b
+[INFO ] - 2020-12-26/00:18:08 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/00:18:20 - c.t.c.d.u.FindConversationsUseCase - find conversations by userId: f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/00:18:44 - c.t.c.d.u.FindConversationsUseCase - find conversations by userId: 49f9e576-1698-4272-81fa-c97577499a1a
+[INFO ] - 2020-12-26/00:22:43 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/00:22:43 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/00:22:43 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/00:22:43 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/00:22:48 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3240 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/00:22:48 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/00:22:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/00:22:50 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/00:22:51 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6424e613' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/00:22:51 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/00:22:51 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/00:22:51 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/00:22:51 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/00:22:51 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/00:22:51 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/00:22:51 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2698 ms
+[INFO ] - 2020-12-26/00:22:51 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/00:22:51 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/00:22:51 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/00:22:52 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/00:22:52 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/00:22:52 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/00:22:52 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/00:22:53 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/00:22:53 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/00:22:53 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/00:22:54 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/00:22:55 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d5176d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@18baee88, org.springframework.security.web.header.HeaderWriterFilter@4c69b396, org.springframework.web.filter.CorsFilter@31d791c0, org.springframework.security.web.authentication.logout.LogoutFilter@5bdef8ee, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@7077ae9c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@473c491, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37289e90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@685e5967, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@623c9988, org.springframework.security.web.session.SessionManagementFilter@121f97fb, org.springframework.security.web.access.ExceptionTranslationFilter@73c6ebec]
+[INFO ] - 2020-12-26/00:22:55 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/00:22:55 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/00:22:55 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/00:22:55 - com.tronxi.chat.ChatApplication - Started ChatApplication in 7.771 seconds (JVM running for 9.54)
+[INFO ] - 2020-12-26/00:22:56 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/00:22:56 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/00:22:56 - o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[INFO ] - 2020-12-26/00:23:34 - c.t.c.i.a.r.c.LoginController - Login user with name sergio
+[INFO ] - 2020-12-26/00:23:37 - c.t.c.d.usecase.FindAllUsersUseCase - Finding all users
+[INFO ] - 2020-12-26/00:23:40 - c.t.c.d.u.FindConversationsUseCase - find conversations by userId: 49f9e576-1698-4272-81fa-c97577499a1a
+[INFO ] - 2020-12-26/00:23:50 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[ERROR] - 2020-12-26/00:23:50 - c.t.c.i.a.r.e.ExceptionHandler - com.tronxi.chat.domain.exception.ConversationAlreadyExistsException: Conversation between users already exists
+[INFO ] - 2020-12-26/00:23:58 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/00:24:04 - c.t.c.d.u.FindConversationsUseCase - find conversations by userId: 49f9e576-1698-4272-81fa-c97577499a1a
+[INFO ] - 2020-12-26/00:24:52 - c.t.c.d.u.FindConversationsUseCase - find conversations by userId: f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/00:26:49 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/00:26:49 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/00:26:49 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/00:26:49 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/00:26:53 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3252 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/00:26:53 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/00:26:55 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/00:26:55 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 116 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/00:26:56 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6424e613' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/00:26:56 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/00:26:56 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/00:26:56 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/00:26:56 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/00:26:56 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/00:26:57 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/00:26:57 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3096 ms
+[INFO ] - 2020-12-26/00:26:57 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/00:26:57 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/00:26:57 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/00:26:57 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/00:26:57 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/00:26:58 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/00:26:58 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/00:26:59 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/00:26:59 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/00:27:00 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/00:27:01 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/00:27:02 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d5176d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@18baee88, org.springframework.security.web.header.HeaderWriterFilter@4c69b396, org.springframework.web.filter.CorsFilter@31d791c0, org.springframework.security.web.authentication.logout.LogoutFilter@5bdef8ee, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@7077ae9c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@473c491, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37289e90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@685e5967, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@623c9988, org.springframework.security.web.session.SessionManagementFilter@121f97fb, org.springframework.security.web.access.ExceptionTranslationFilter@73c6ebec]
+[INFO ] - 2020-12-26/00:27:02 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/00:27:02 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/00:27:02 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/00:27:03 - com.tronxi.chat.ChatApplication - Started ChatApplication in 10.103 seconds (JVM running for 12.364)
+[INFO ] - 2020-12-26/00:27:03 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/00:27:03 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/00:27:03 - o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[INFO ] - 2020-12-26/00:29:23 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/00:29:23 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/00:29:23 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/00:29:23 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/00:29:31 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3278 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/00:29:31 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/00:29:33 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/00:29:33 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 110 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/00:29:34 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6424e613' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/00:29:34 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/00:29:34 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/00:29:34 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/00:29:34 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/00:29:34 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/00:29:34 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/00:29:34 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2723 ms
+[INFO ] - 2020-12-26/00:29:34 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/00:29:34 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/00:29:34 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/00:29:35 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/00:29:35 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/00:29:35 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/00:29:35 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/00:29:36 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/00:29:36 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/00:29:36 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/00:29:37 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/00:29:37 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d5176d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@25291901, org.springframework.security.web.header.HeaderWriterFilter@f4b2d13, org.springframework.web.filter.CorsFilter@31d791c0, org.springframework.security.web.authentication.logout.LogoutFilter@5bdef8ee, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@22a1d77b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@473c491, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37289e90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@685e5967, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@623c9988, org.springframework.security.web.session.SessionManagementFilter@32f243f, org.springframework.security.web.access.ExceptionTranslationFilter@62129f97]
+[INFO ] - 2020-12-26/00:29:37 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/00:29:38 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/00:29:38 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/00:29:38 - com.tronxi.chat.ChatApplication - Started ChatApplication in 7.79 seconds (JVM running for 9.776)
+[INFO ] - 2020-12-26/00:29:38 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/00:29:38 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/00:29:38 - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+[INFO ] - 2020-12-26/00:30:48 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[INFO ] - 2020-12-26/00:30:48 - c.t.c.d.u.CreateConversationUseCase - saved conversation with id 18f7114a-a6c8-4b9b-9642-f5ae7b0aa01a
+[INFO ] - 2020-12-26/00:30:54 - c.t.c.d.u.FindConversationsUseCase - find conversations by userId: f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/00:31:05 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/00:31:05 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/00:31:05 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/00:31:05 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/00:31:10 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3291 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/00:31:10 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/00:31:12 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/00:31:12 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/00:31:12 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6424e613' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/00:31:12 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/00:31:13 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/00:31:13 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/00:31:13 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/00:31:13 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/00:31:13 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/00:31:13 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2852 ms
+[INFO ] - 2020-12-26/00:31:13 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/00:31:13 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/00:31:13 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/00:31:13 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/00:31:13 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/00:31:13 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/00:31:13 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/00:31:14 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/00:31:14 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/00:31:15 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/00:31:16 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/00:31:16 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d21d12b, org.springframework.security.web.context.SecurityContextPersistenceFilter@25291901, org.springframework.security.web.header.HeaderWriterFilter@f4b2d13, org.springframework.web.filter.CorsFilter@669b8190, org.springframework.security.web.authentication.logout.LogoutFilter@1b9cfc19, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@22a1d77b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6aa85fcf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@701996e9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59e67a18, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5fdcc63f, org.springframework.security.web.session.SessionManagementFilter@32f243f, org.springframework.security.web.access.ExceptionTranslationFilter@62129f97]
+[INFO ] - 2020-12-26/00:31:16 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/00:31:16 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/00:31:16 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/00:31:16 - com.tronxi.chat.ChatApplication - Started ChatApplication in 7.552 seconds (JVM running for 9.156)
+[INFO ] - 2020-12-26/00:31:17 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/00:31:17 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/00:31:17 - o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[INFO ] - 2020-12-26/00:48:06 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/00:48:06 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/00:48:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/00:48:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/00:48:16 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3362 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/00:48:16 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/00:48:18 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/00:48:18 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/00:48:18 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4d354a3e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/00:48:18 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/00:48:19 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/00:48:19 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/00:48:19 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/00:48:19 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/00:48:19 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/00:48:19 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2784 ms
+[INFO ] - 2020-12-26/00:48:19 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/00:48:19 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/00:48:19 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/00:48:19 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/00:48:19 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/00:48:19 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/00:48:19 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/00:48:20 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/00:48:20 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/00:48:21 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/00:48:22 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/00:48:22 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13e6ab86, org.springframework.security.web.context.SecurityContextPersistenceFilter@4fc1eee5, org.springframework.security.web.header.HeaderWriterFilter@121f97fb, org.springframework.web.filter.CorsFilter@4f5d7091, org.springframework.security.web.authentication.logout.LogoutFilter@2d21d12b, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@3f1e18b1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@530ee11a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36618b3b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b9cfc19, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18b88f7, org.springframework.security.web.session.SessionManagementFilter@599fab92, org.springframework.security.web.access.ExceptionTranslationFilter@701996e9]
+[INFO ] - 2020-12-26/00:48:22 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/00:48:22 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/00:48:22 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/00:48:23 - com.tronxi.chat.ChatApplication - Started ChatApplication in 7.886 seconds (JVM running for 10.583)
+[INFO ] - 2020-12-26/00:48:23 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/00:48:23 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/00:48:23 - o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[INFO ] - 2020-12-26/00:49:23 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:07:01 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:07:01 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/01:07:01 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/01:07:01 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/01:07:12 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3469 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/01:07:12 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/01:07:14 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/01:07:14 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/01:07:14 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@e62319f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:07:14 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:07:15 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/01:07:15 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:07:15 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/01:07:15 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/01:07:15 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/01:07:15 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2626 ms
+[INFO ] - 2020-12-26/01:07:15 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/01:07:15 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/01:07:15 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/01:07:15 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/01:07:15 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/01:07:15 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/01:07:16 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/01:07:16 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/01:07:16 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/01:07:17 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/01:07:18 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/01:07:18 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@580a5b6e, org.springframework.security.web.context.SecurityContextPersistenceFilter@765d67dd, org.springframework.security.web.header.HeaderWriterFilter@1d7f2719, org.springframework.web.filter.CorsFilter@66450129, org.springframework.security.web.authentication.logout.LogoutFilter@623c9988, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@6f30d0eb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4dfe56dc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fda92e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66e44f9f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14f1545c, org.springframework.security.web.session.SessionManagementFilter@5f3bc119, org.springframework.security.web.access.ExceptionTranslationFilter@40477d52]
+[INFO ] - 2020-12-26/01:07:18 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:07:18 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:07:18 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/01:07:19 - com.tronxi.chat.ChatApplication - Started ChatApplication in 7.527 seconds (JVM running for 9.335)
+[INFO ] - 2020-12-26/01:07:19 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:07:19 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:07:19 - o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[INFO ] - 2020-12-26/01:07:37 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:07:40 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:07:44 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:07:51 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:07:54 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:17:30 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:17:30 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/01:17:30 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/01:17:30 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/01:17:40 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3512 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/01:17:40 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/01:17:42 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/01:17:42 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/01:17:42 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4d354a3e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:17:42 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:17:42 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/01:17:42 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:17:42 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/01:17:42 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/01:17:43 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/01:17:43 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2761 ms
+[INFO ] - 2020-12-26/01:17:43 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/01:17:43 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/01:17:43 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/01:17:43 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/01:17:43 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/01:17:43 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/01:17:43 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/01:17:44 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/01:17:44 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/01:17:44 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/01:17:45 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/01:17:46 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@580a5b6e, org.springframework.security.web.context.SecurityContextPersistenceFilter@765d67dd, org.springframework.security.web.header.HeaderWriterFilter@1d7f2719, org.springframework.web.filter.CorsFilter@66450129, org.springframework.security.web.authentication.logout.LogoutFilter@623c9988, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@80b6098, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4dfe56dc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fda92e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66e44f9f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14f1545c, org.springframework.security.web.session.SessionManagementFilter@5f3bc119, org.springframework.security.web.access.ExceptionTranslationFilter@40477d52]
+[INFO ] - 2020-12-26/01:17:46 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:17:46 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:17:46 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/01:17:46 - com.tronxi.chat.ChatApplication - Started ChatApplication in 7.729 seconds (JVM running for 9.612)
+[INFO ] - 2020-12-26/01:17:47 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:17:47 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:17:47 - o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[INFO ] - 2020-12-26/01:17:59 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:18:23 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:18:32 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:19:18 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:19:18 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/01:19:18 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/01:19:18 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/01:19:26 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3527 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/01:19:26 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/01:19:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/01:19:28 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/01:19:28 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@e62319f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:19:28 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:19:28 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/01:19:28 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:19:28 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/01:19:28 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/01:19:28 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/01:19:28 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2639 ms
+[INFO ] - 2020-12-26/01:19:28 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/01:19:29 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/01:19:29 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/01:19:29 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/01:19:29 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/01:19:29 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/01:19:29 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/01:19:30 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/01:19:30 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/01:19:30 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/01:19:31 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/01:19:32 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@580a5b6e, org.springframework.security.web.context.SecurityContextPersistenceFilter@765d67dd, org.springframework.security.web.header.HeaderWriterFilter@1d7f2719, org.springframework.web.filter.CorsFilter@66450129, org.springframework.security.web.authentication.logout.LogoutFilter@623c9988, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@80b6098, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4dfe56dc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fda92e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66e44f9f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14f1545c, org.springframework.security.web.session.SessionManagementFilter@5f3bc119, org.springframework.security.web.access.ExceptionTranslationFilter@40477d52]
+[INFO ] - 2020-12-26/01:19:32 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:19:32 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:19:32 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/01:19:33 - com.tronxi.chat.ChatApplication - Started ChatApplication in 7.692 seconds (JVM running for 9.223)
+[INFO ] - 2020-12-26/01:19:33 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:19:33 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:19:33 - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+[INFO ] - 2020-12-26/01:19:45 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:19:48 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:19:51 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:29:45 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:29:45 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/01:29:45 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/01:29:45 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/01:29:57 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3566 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/01:29:57 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/01:30:00 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/01:30:00 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/01:30:00 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4d354a3e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:30:00 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:30:01 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/01:30:01 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:30:01 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/01:30:01 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/01:30:01 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/01:30:01 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3445 ms
+[INFO ] - 2020-12-26/01:30:01 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/01:30:01 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/01:30:01 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/01:30:02 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/01:30:02 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/01:30:02 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/01:30:02 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/01:30:03 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/01:30:03 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/01:30:03 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/01:30:04 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/01:30:04 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@445d878c, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f3bc119, org.springframework.security.web.header.HeaderWriterFilter@59b43e35, org.springframework.web.filter.CorsFilter@16eca98a, org.springframework.security.web.authentication.logout.LogoutFilter@7d5176d6, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@4a0f4282, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@34128fed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@765d67dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5bdef8ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@119f035f, org.springframework.security.web.session.SessionManagementFilter@2cc82c83, org.springframework.security.web.access.ExceptionTranslationFilter@37289e90]
+[INFO ] - 2020-12-26/01:30:05 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:30:05 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:30:05 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/01:30:05 - com.tronxi.chat.ChatApplication - Started ChatApplication in 9.292 seconds (JVM running for 11.313)
+[INFO ] - 2020-12-26/01:30:05 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:30:05 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:30:05 - o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[ERROR] - 2020-12-26/01:30:37 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+com.tronxi.chat.configuration.security.exception.JwtException: Unauthorized Exception (401). Jwt exception. JWT is wrong. The Token has expired on Sat Dec 26 01:23:34 CET 2020.
+	at com.tronxi.chat.configuration.security.service.JwtService.verify(JwtService.java:56)
+	at com.tronxi.chat.configuration.security.service.JwtService.user(JwtService.java:40)
+	at com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter.doFilterInternal(JwtAuthorizationFilter.java:37)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+[INFO ] - 2020-12-26/01:30:54 - c.t.c.i.a.r.c.LoginController - Login user with name sergio
+[INFO ] - 2020-12-26/01:30:58 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:31:09 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:31:50 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:31:50 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/01:31:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/01:31:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/01:31:55 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3586 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/01:31:55 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/01:31:57 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/01:31:57 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/01:31:57 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@e62319f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:31:57 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:31:57 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/01:31:57 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:31:57 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/01:31:57 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/01:31:58 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/01:31:58 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2540 ms
+[INFO ] - 2020-12-26/01:31:58 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/01:31:58 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/01:31:58 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/01:31:58 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/01:31:58 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/01:31:58 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/01:31:58 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/01:31:59 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/01:31:59 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/01:32:00 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/01:32:01 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/01:32:01 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@119f035f, org.springframework.security.web.context.SecurityContextPersistenceFilter@345d4ecb, org.springframework.security.web.header.HeaderWriterFilter@36618b3b, org.springframework.web.filter.CorsFilter@480f1311, org.springframework.security.web.authentication.logout.LogoutFilter@530ee11a, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@80b6098, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@14927cd4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79f82fc4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6aa85fcf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60c68c7b, org.springframework.security.web.session.SessionManagementFilter@5e783f78, org.springframework.security.web.access.ExceptionTranslationFilter@599fab92]
+[INFO ] - 2020-12-26/01:32:01 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:32:01 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:32:01 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/01:32:02 - com.tronxi.chat.ChatApplication - Started ChatApplication in 7.45 seconds (JVM running for 8.939)
+[INFO ] - 2020-12-26/01:32:02 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:32:02 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:32:02 - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+[INFO ] - 2020-12-26/01:32:10 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:32:13 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:33:57 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:33:57 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/01:33:57 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/01:33:57 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/01:34:06 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3597 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/01:34:06 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/01:34:08 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/01:34:08 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/01:34:08 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3079c26a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:34:08 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:34:09 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/01:34:09 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:34:09 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/01:34:09 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/01:34:09 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/01:34:09 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2770 ms
+[INFO ] - 2020-12-26/01:34:09 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/01:34:09 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/01:34:09 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/01:34:10 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/01:34:10 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/01:34:10 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/01:34:10 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/01:34:11 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/01:34:11 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/01:34:12 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/01:34:13 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/01:34:13 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d00c2ae, org.springframework.security.web.context.SecurityContextPersistenceFilter@50ac63b2, org.springframework.security.web.header.HeaderWriterFilter@3ce067bd, org.springframework.web.filter.CorsFilter@665574fb, org.springframework.security.web.authentication.logout.LogoutFilter@18918ab9, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@3e729d46, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5b5f06bb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48dfce5c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fe687b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3eb7ff78, org.springframework.security.web.session.SessionManagementFilter@73a5cc47, org.springframework.security.web.access.ExceptionTranslationFilter@2f6f2d91]
+[INFO ] - 2020-12-26/01:34:13 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:34:13 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:34:13 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/01:34:14 - com.tronxi.chat.ChatApplication - Started ChatApplication in 8.37 seconds (JVM running for 11.91)
+[INFO ] - 2020-12-26/01:34:14 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:34:14 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:34:14 - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+[INFO ] - 2020-12-26/01:34:55 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:34:56 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:35:14 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[WARN ] - 2020-12-26/01:36:32 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m22s434ms).
+[INFO ] - 2020-12-26/01:36:32 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:36:32 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/01:36:32 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/01:36:32 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/01:39:42 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3653 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/01:39:42 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/01:39:49 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/01:39:49 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 109 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/01:39:49 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@e62319f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:39:49 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:39:50 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/01:39:50 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:39:50 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/01:39:50 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/01:39:50 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/01:39:50 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7480 ms
+[INFO ] - 2020-12-26/01:39:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/01:39:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/01:39:50 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/01:39:51 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/01:39:51 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/01:39:51 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/01:39:51 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/01:39:52 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/01:39:52 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/01:39:52 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/01:39:53 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/01:39:54 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a106b26, org.springframework.security.web.context.SecurityContextPersistenceFilter@25cef4b3, org.springframework.security.web.header.HeaderWriterFilter@439054a7, org.springframework.web.filter.CorsFilter@445d878c, org.springframework.security.web.authentication.logout.LogoutFilter@24347d8b, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@5aefdb9e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@66450129, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bdef8ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77da2881, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16eca98a, org.springframework.security.web.session.SessionManagementFilter@535adf36, org.springframework.security.web.access.ExceptionTranslationFilter@685e5967]
+[INFO ] - 2020-12-26/01:39:54 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:39:54 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:39:54 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/01:39:55 - com.tronxi.chat.ChatApplication - Started ChatApplication in 14.602 seconds (JVM running for 18.047)
+[INFO ] - 2020-12-26/01:39:55 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:39:55 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:39:55 - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+[INFO ] - 2020-12-26/01:40:59 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:41:03 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:41:37 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:41:40 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:42:28 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId 49f9e576-1698-4272-81fa-c97577499a1a
+[INFO ] - 2020-12-26/01:43:03 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/01:45:33 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[ERROR] - 2020-12-26/01:45:33 - c.t.c.i.a.r.e.ExceptionHandler - com.tronxi.chat.domain.exception.ConversationAlreadyExistsException: Conversation between users already exists
+[INFO ] - 2020-12-26/01:49:41 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:49:41 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/01:49:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/01:49:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/01:49:49 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3735 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/01:49:49 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/01:49:51 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/01:49:51 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 90 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/01:49:52 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@e62319f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:49:52 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:49:52 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/01:49:52 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:49:52 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/01:49:52 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/01:49:52 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/01:49:52 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2915 ms
+[INFO ] - 2020-12-26/01:49:52 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/01:49:52 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/01:49:52 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/01:49:53 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/01:49:53 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/01:49:53 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/01:49:53 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/01:49:54 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/01:49:54 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/01:49:54 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/01:49:55 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/01:49:55 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@119f035f, org.springframework.security.web.context.SecurityContextPersistenceFilter@345d4ecb, org.springframework.security.web.header.HeaderWriterFilter@36618b3b, org.springframework.web.filter.CorsFilter@480f1311, org.springframework.security.web.authentication.logout.LogoutFilter@530ee11a, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@80b6098, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@14927cd4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79f82fc4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6aa85fcf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60c68c7b, org.springframework.security.web.session.SessionManagementFilter@5e783f78, org.springframework.security.web.access.ExceptionTranslationFilter@599fab92]
+[INFO ] - 2020-12-26/01:49:56 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:49:56 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:49:56 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/01:49:56 - com.tronxi.chat.ChatApplication - Started ChatApplication in 8.014 seconds (JVM running for 9.774)
+[INFO ] - 2020-12-26/01:49:57 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:49:57 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:49:57 - o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[INFO ] - 2020-12-26/01:51:23 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[INFO ] - 2020-12-26/01:51:24 - c.t.c.d.u.CreateConversationUseCase - saved conversation with id a63243a8-c595-42b6-b9b7-71d0a23d19e8
+[INFO ] - 2020-12-26/01:51:26 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[INFO ] - 2020-12-26/01:51:26 - c.t.c.d.u.CreateConversationUseCase - saved conversation with id 4cd1ac82-ab15-4689-b25e-bb5c6a67e767
+[INFO ] - 2020-12-26/01:53:49 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:53:50 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/01:53:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/01:53:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/01:53:57 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3756 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/01:53:57 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/01:53:59 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/01:53:59 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/01:54:00 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@e62319f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:54:00 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:54:00 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/01:54:00 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:54:00 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/01:54:00 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/01:54:00 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/01:54:00 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2805 ms
+[INFO ] - 2020-12-26/01:54:00 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/01:54:01 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/01:54:01 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/01:54:01 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/01:54:01 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/01:54:01 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/01:54:01 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/01:54:02 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/01:54:02 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/01:54:02 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/01:54:03 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/01:54:03 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18b88f7, org.springframework.security.web.context.SecurityContextPersistenceFilter@36618b3b, org.springframework.security.web.header.HeaderWriterFilter@18baee88, org.springframework.web.filter.CorsFilter@128ebca1, org.springframework.security.web.authentication.logout.LogoutFilter@5fdcc63f, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@5aefdb9e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7057d9f4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3763aafd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e68bd3d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34128fed, org.springframework.security.web.session.SessionManagementFilter@4fc1eee5, org.springframework.security.web.access.ExceptionTranslationFilter@4e2ad1f2]
+[INFO ] - 2020-12-26/01:54:04 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:54:04 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:54:04 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/01:54:04 - com.tronxi.chat.ChatApplication - Started ChatApplication in 7.771 seconds (JVM running for 9.352)
+[INFO ] - 2020-12-26/01:54:05 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:54:05 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:54:05 - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+[INFO ] - 2020-12-26/01:54:55 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[INFO ] - 2020-12-26/01:54:56 - c.t.c.d.u.CreateConversationUseCase - saved conversation with id a59f50f8-6b0e-453c-bdbd-456afc736bc6
+[INFO ] - 2020-12-26/01:54:57 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[INFO ] - 2020-12-26/01:54:57 - c.t.c.d.u.CreateConversationUseCase - saved conversation with id 8a0f704b-1cc1-437c-8329-d66b81f43457
+[INFO ] - 2020-12-26/01:55:59 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:55:59 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/01:55:59 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/01:55:59 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/01:56:08 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3774 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/01:56:08 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/01:56:10 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/01:56:10 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/01:56:11 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@8e99809' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:56:11 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:56:11 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/01:56:11 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:56:11 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/01:56:11 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/01:56:11 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/01:56:11 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2888 ms
+[INFO ] - 2020-12-26/01:56:11 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/01:56:11 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/01:56:11 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/01:56:12 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/01:56:12 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/01:56:12 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/01:56:12 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/01:56:13 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/01:56:13 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/01:56:13 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/01:56:14 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/01:56:14 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14927cd4, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ea4290f, org.springframework.security.web.header.HeaderWriterFilter@599fab92, org.springframework.web.filter.CorsFilter@5a106b26, org.springframework.security.web.authentication.logout.LogoutFilter@1b18fa79, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@3458be63, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@580a5b6e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e783f78, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fe4b8b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@445d878c, org.springframework.security.web.session.SessionManagementFilter@2fda92e0, org.springframework.security.web.access.ExceptionTranslationFilter@1d7f2719]
+[INFO ] - 2020-12-26/01:56:15 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:56:15 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:56:15 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/01:56:15 - com.tronxi.chat.ChatApplication - Started ChatApplication in 8.005 seconds (JVM running for 10.371)
+[INFO ] - 2020-12-26/01:56:16 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:56:16 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:56:16 - o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[INFO ] - 2020-12-26/01:56:54 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[INFO ] - 2020-12-26/01:59:09 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:59:09 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/01:59:09 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/01:59:09 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/01:59:17 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3795 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/01:59:17 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/01:59:19 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/01:59:19 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/01:59:20 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@e62319f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:59:20 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/01:59:20 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/01:59:20 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:59:20 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/01:59:20 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/01:59:20 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/01:59:20 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2738 ms
+[INFO ] - 2020-12-26/01:59:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/01:59:21 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/01:59:21 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/01:59:21 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/01:59:21 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/01:59:21 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/01:59:21 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/01:59:22 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/01:59:22 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/01:59:22 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/01:59:23 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/01:59:23 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@119f035f, org.springframework.security.web.context.SecurityContextPersistenceFilter@345d4ecb, org.springframework.security.web.header.HeaderWriterFilter@36618b3b, org.springframework.web.filter.CorsFilter@480f1311, org.springframework.security.web.authentication.logout.LogoutFilter@530ee11a, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@80b6098, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@14927cd4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79f82fc4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6aa85fcf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60c68c7b, org.springframework.security.web.session.SessionManagementFilter@5e783f78, org.springframework.security.web.access.ExceptionTranslationFilter@599fab92]
+[INFO ] - 2020-12-26/01:59:24 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/01:59:24 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/01:59:24 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/01:59:24 - com.tronxi.chat.ChatApplication - Started ChatApplication in 7.911 seconds (JVM running for 9.911)
+[INFO ] - 2020-12-26/01:59:25 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:59:25 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/01:59:25 - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+[INFO ] - 2020-12-26/01:59:48 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[INFO ] - 2020-12-26/01:59:49 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[INFO ] - 2020-12-26/01:59:49 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[INFO ] - 2020-12-26/02:00:14 - c.t.c.d.usecase.CreateUserUseCase - Creating user with name sergio3
+[INFO ] - 2020-12-26/02:00:14 - c.t.c.d.usecase.CreateUserUseCase - Created user with name sergio3
+[INFO ] - 2020-12-26/02:00:38 - c.t.c.d.usecase.FindAllUsersUseCase - Finding all users
+[INFO ] - 2020-12-26/02:00:48 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[INFO ] - 2020-12-26/02:00:56 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId ec793a5d-4f95-4bfd-aea5-8a50298129fd 
+[INFO ] - 2020-12-26/02:00:57 - c.t.c.d.u.CreateConversationUseCase - saved conversation with id 05e7c5d0-bb96-4b56-8eec-4b833cd08304
+[INFO ] - 2020-12-26/02:01:23 - c.t.c.d.u.CreateConversationUseCase - creating conversation with senderId f3d864c9-6232-4147-b930-15a29640eb08 and receiverId 49f9e576-1698-4272-81fa-c97577499a1a 
+[INFO ] - 2020-12-26/02:01:37 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId 49f9e576-1698-4272-81fa-c97577499a1a
+[INFO ] - 2020-12-26/02:02:00 - c.t.c.d.usecase.CreateUserUseCase - Creating user with name sergio3
+[ERROR] - 2020-12-26/02:02:00 - c.t.c.d.usecase.CreateUserUseCase - User with name sergio3 already exists
+[ERROR] - 2020-12-26/02:02:00 - c.t.c.i.a.r.e.ExceptionHandler - com.tronxi.chat.domain.exception.UserAlreadyExistsException: El usuaro ya existe
+[INFO ] - 2020-12-26/02:02:15 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/02:02:54 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/02:02:55 - c.t.c.d.usecase.SendMessageUseCase - sending message to conversationId a2ec831d-1318-4577-aaf7-267db692e16b from userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/02:02:58 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/02:03:26 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId 49f9e576-1698-4272-81fa-c97577499a1a
+[INFO ] - 2020-12-26/02:03:38 - c.t.c.d.usecase.ReadMessageUseCase - reading message from conversationId a2ec831d-1318-4577-aaf7-267db692e16b with userId f3d864c9-6232-4147-b930-15a29640eb08
+[INFO ] - 2020-12-26/02:04:29 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/02:04:29 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/02:04:29 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/02:04:29 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] - 2020-12-26/02:04:37 - com.tronxi.chat.ChatApplication - Starting ChatApplication using Java 11.0.8 on MacBook-Pro-de-sergio.local with PID 3820 (/Users/sergio/workspace/spring-boot/chat/target/classes started by sergio in /Users/sergio/workspace/spring-boot/chat)
+[INFO ] - 2020-12-26/02:04:37 - com.tronxi.chat.ChatApplication - The following profiles are active: local
+[INFO ] - 2020-12-26/02:04:39 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] - 2020-12-26/02:04:39 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 114 ms. Found 3 JPA repository interfaces.
+[INFO ] - 2020-12-26/02:04:40 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4d354a3e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/02:04:40 - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] - 2020-12-26/02:04:40 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] - 2020-12-26/02:04:40 - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/02:04:40 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] - 2020-12-26/02:04:40 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+[INFO ] - 2020-12-26/02:04:40 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] - 2020-12-26/02:04:40 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3181 ms
+[INFO ] - 2020-12-26/02:04:40 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] - 2020-12-26/02:04:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] - 2020-12-26/02:04:41 - o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[INFO ] - 2020-12-26/02:04:41 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] - 2020-12-26/02:04:41 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+[INFO ] - 2020-12-26/02:04:41 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] - 2020-12-26/02:04:41 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] - 2020-12-26/02:04:42 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] - 2020-12-26/02:04:42 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] - 2020-12-26/02:04:43 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] - 2020-12-26/02:04:44 - o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+[INFO ] - 2020-12-26/02:04:44 - o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@445d878c, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f3bc119, org.springframework.security.web.header.HeaderWriterFilter@59b43e35, org.springframework.web.filter.CorsFilter@16eca98a, org.springframework.security.web.authentication.logout.LogoutFilter@7d5176d6, com.tronxi.chat.configuration.security.filter.JwtAuthorizationFilter@4a0f4282, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@34128fed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@765d67dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5bdef8ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@119f035f, org.springframework.security.web.session.SessionManagementFilter@2cc82c83, org.springframework.security.web.access.ExceptionTranslationFilter@37289e90]
+[INFO ] - 2020-12-26/02:04:44 - o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/02:04:45 - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] - 2020-12-26/02:04:45 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] - 2020-12-26/02:04:45 - com.tronxi.chat.ChatApplication - Started ChatApplication in 9.507 seconds (JVM running for 11.495)
+[INFO ] - 2020-12-26/02:04:46 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/02:04:46 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] - 2020-12-26/02:04:46 - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+[INFO ] - 2020-12-26/02:05:05 - o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] - 2020-12-26/02:05:05 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] - 2020-12-26/02:05:05 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] - 2020-12-26/02:05:05 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
