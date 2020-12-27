@@ -29,7 +29,7 @@ public class MessageController {
     private final SendMessageMapper sendMessageMapper;
     private final ReadMessageMapper readMessageMapper;
 
-    @PostMapping("/conversation/{conversationId}/user/{userId}")
+    @PostMapping("/conversations/{conversationId}/users/{userId}")
     ResponseEntity<Void> sendMessage(@PathVariable String conversationId,
                                      @PathVariable String userId,
                                      @RequestBody SendMessageRequest sendMessageRequest) {
@@ -38,7 +38,7 @@ public class MessageController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/conversation/{conversationId}/user/{userId}")
+    @GetMapping("/conversations/{conversationId}/users/{userId}")
     ResponseEntity<List<ReadMessageResponse>> readMessages(@PathVariable String conversationId, @PathVariable String userId) {
         List<ReadMessageResult> readMessageResultList = readMessage.read(readMessageMapper.toDomain(conversationId, userId));
         return ResponseEntity.ok(readMessageMapper.toResponse(readMessageResultList));

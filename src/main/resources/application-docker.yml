@@ -1,0 +1,20 @@
+spring:
+  rabbitmq:
+    host: chat-rabbit
+    port: 5672
+    username: guest
+  datasource:
+    url: jdbc:mysql://${chat-db}:3306/chat?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    username: chat
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

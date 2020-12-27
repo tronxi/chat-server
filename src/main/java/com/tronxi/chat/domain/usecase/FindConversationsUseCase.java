@@ -25,7 +25,9 @@ public class FindConversationsUseCase implements FindConversations {
     public List<FindConversationResult> findByUserId(String userId) {
         log.info("find conversations by userId: {}", userId);
         User user = userRetriever.findById(userId);
-        List<Conversation> conversationList = conversationRepository.findByUser(user);
+        List<Conversation> conversationList = conversationRepository.findByUser(user).stream()
+                .filter(conversation -> !conversation.getMessageList().isEmpty())
+                .collect(Collectors.toList());
         return conversationList.stream()
                 .map(conversation -> generateName(conversation, userId))
                 .collect(Collectors.toList());

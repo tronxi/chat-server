@@ -1,14 +1,15 @@
 package com.tronxi.chat.infrastructure.api.rest.controller;
 
+import com.tronxi.chat.configuration.security.service.JwtService;
 import com.tronxi.chat.domain.port.primary.CreateUser;
 import com.tronxi.chat.domain.port.primary.FindAllUsers;
 import com.tronxi.chat.domain.port.primary.FindConversations;
-import com.tronxi.chat.infrastructure.api.rest.mapper.FindConversationMapper;
 import com.tronxi.chat.infrastructure.api.rest.mapper.CreateUserMapper;
 import com.tronxi.chat.infrastructure.api.rest.mapper.FindAllUsersMapper;
-import com.tronxi.chat.infrastructure.api.rest.model.FindConversationResponse;
+import com.tronxi.chat.infrastructure.api.rest.mapper.FindConversationMapper;
 import com.tronxi.chat.infrastructure.api.rest.model.CreateUserRequest;
 import com.tronxi.chat.infrastructure.api.rest.model.FindAllUsersResponse;
+import com.tronxi.chat.infrastructure.api.rest.model.FindConversationResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,7 @@ public class UserController {
     private final CreateUser createUser;
     private final FindAllUsers findAllUsers;
     private final FindConversations findConversations;
+    private final JwtService jwtService;
 
     private final CreateUserMapper createUserMapper;
     private final FindAllUsersMapper findAllUsersMapper;
@@ -39,8 +41,9 @@ public class UserController {
 
     @GetMapping
     @PreAuthorize("authenticated")
-    public ResponseEntity<List<FindAllUsersResponse>> findAllUsers() {
-        List<FindAllUsersResponse> findAllUsersResponseList = findAllUsersMapper.toResponse(findAllUsers.find());
+    public ResponseEntity<List<FindAllUsersResponse>> findAllUsers(@RequestHeader("Authorization") String authorization) {
+        String userId = jwtService.retrieveId(authorization);
+        List<FindAllUsersResponse> findAllUsersResponseList = findAllUsersMapper.toResponse(findAllUsers.find(userId));
         return ResponseEntity.ok(findAllUsersResponseList);
     }
 
