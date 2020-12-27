@@ -19,7 +19,7 @@ public class MessageEntity {
     @Id
     private String id;
     private String message;
-    private Boolean read;
+    private Boolean readed;
     private String senderId;
     private Date date;
 }

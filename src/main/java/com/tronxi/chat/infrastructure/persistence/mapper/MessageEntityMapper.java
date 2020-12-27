@@ -13,7 +13,7 @@ public class MessageEntityMapper {
         return MessageEntity.builder()
                 .id(message.getId())
                 .message(message.getMessage())
-                .read(message.getRead())
+                .readed(message.getRead())
                 .senderId(message.getSenderId())
                 .date(message.getDate())
                 .build();
@@ -29,7 +29,7 @@ public class MessageEntityMapper {
         return Message.builder()
                 .id(messageEntity.getId())
                 .message(messageEntity.getMessage())
-                .read(messageEntity.getRead())
+                .read(messageEntity.getReaded())
                 .senderId(messageEntity.getSenderId())
                 .date(messageEntity.getDate())
                 .build();
