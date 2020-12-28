@@ -7,6 +7,7 @@ import com.tronxi.chat.domain.model.User;
 import com.tronxi.chat.domain.model.sendmessage.SendMessageOrder;
 import com.tronxi.chat.domain.port.primary.SendMessage;
 import com.tronxi.chat.domain.port.secondary.ConversationRepository;
+import com.tronxi.chat.domain.port.secondary.MessageEvent;
 import com.tronxi.chat.domain.port.secondary.MessageRepository;
 import com.tronxi.chat.domain.service.ConversationRetriever;
 import com.tronxi.chat.domain.service.UserRetriever;
@@ -24,6 +25,7 @@ public class SendMessageUseCase implements SendMessage {
 
     private final ConversationRepository conversationRepository;
     private final MessageRepository messageRepository;
+    private final MessageEvent messageEvent;
 
     @Override
     public void send(SendMessageOrder sendMessageOrder) {
@@ -40,6 +42,7 @@ public class SendMessageUseCase implements SendMessage {
         conversation.addMessage(message);
 
         conversationRepository.save(conversation);
+        messageEvent.send(conversation);
     }
 
     private boolean checkUserInConversation(Conversation conversation, User user) {

@@ -1,9 +1,9 @@
 server:
-  port: 8081
+  port: 8080
 spring:
   rabbitmq:
-    host: chat-rabbit
-    port: 5672
+    host: localhost
+    port: 61613
     username: guest
     password: guest
   datasource:
