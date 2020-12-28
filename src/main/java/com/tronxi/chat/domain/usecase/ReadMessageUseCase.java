@@ -14,6 +14,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -39,9 +40,11 @@ public class ReadMessageUseCase implements ReadMessage {
         Conversation readConversation = conversation.markAsRead(user.getId());
         messageRepository.save(readConversation.getMessageList());
 
-        return readConversation.getMessageList().stream()
+        List<ReadMessageResult> messageResultList = readConversation.getMessageList().stream()
                 .map(message -> mapToResult(message, user.getId()))
                 .collect(Collectors.toList());
+        messageResultList.sort(Comparator.comparing(ReadMessageResult::getDate));
+        return messageResultList;
     }
 
     private ReadMessageResult mapToResult(Message message, String userId) {

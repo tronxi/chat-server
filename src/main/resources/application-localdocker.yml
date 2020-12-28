@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   rabbitmq:
     host: chat-rabbit
@@ -14,7 +14,7 @@ spring:
     initialization-mode: never
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
