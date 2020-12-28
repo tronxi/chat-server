@@ -1,3 +1,5 @@
+server:
+  port: 8080
 spring:
   rabbitmq:
     host: chat-rabbit
@@ -9,9 +11,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: chat
     password: chatpass
+    initialization-mode: never
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect

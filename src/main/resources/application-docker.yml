@@ -7,9 +7,10 @@ spring:
     url: jdbc:mysql://${chat-db}:3306/chat?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: chat
+    initialization-mode: ${initializationMode}
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: ${ddlAuto}
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
