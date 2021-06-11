@@ -8,5 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build with Maven
+      - name: echo
         run: echo "hola"
+      - name: show directory
+        run: ls
