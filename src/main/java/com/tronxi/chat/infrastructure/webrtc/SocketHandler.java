@@ -56,7 +56,7 @@ public class SocketHandler extends TextWebSocketHandler {
     private List<String> retrieveOtherUsersInConversation(Conversation conversation, String userId) {
         return conversation.getUserList().stream()
                 .map(User::getId)
-                .filter(id -> !Objects.equals(id, userId))
+                .filter(id -> !userId.equals(id))
                 .collect(Collectors.toList());
     }
 
