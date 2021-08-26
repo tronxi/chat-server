@@ -10,4 +10,4 @@ RUN mvn package spring-boot:repackage
 
 FROM openjdk:11.0.8-slim-buster
 COPY --from="builder" /target/chat-0.0.1-SNAPSHOT.jar .
-CMD java -jar -Dspring.profiles.active=${profile} chat-0.0.1-SNAPSHOT.jar --chat-db=${chat_db} --spring.rabbitmq.password=${rabbit_pass} --secretToken=${secret_token} --spring.datasource.password=${db_pass} --initializationMode=${initializationMode} --ddlAuto=${ddlAuto}
+CMD java -jar -Dspring.profiles.active=${profile} chat-0.0.1-SNAPSHOT.jar --chat-db=${chat_db} --spring.rabbitmq.password=${rabbit_pass} --secretToken=${secret_token} --firebaseConfig=${firebaseConfig} --spring.datasource.password=${db_pass} --initializationMode=${initializationMode} --ddlAuto=${ddlAuto}
