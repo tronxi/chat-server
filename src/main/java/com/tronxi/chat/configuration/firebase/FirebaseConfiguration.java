@@ -20,9 +20,8 @@ public class FirebaseConfiguration {
    @PostConstruct
     public void initialize() {
         try {
-            System.out.println("firebaseConf");
-            System.out.println(firebaseConfig);
-            InputStream stream = new ByteArrayInputStream(firebaseConfig.getBytes());
+            String firebaseConfigWithSpaces = firebaseConfig.replace("#", " ");
+            InputStream stream = new ByteArrayInputStream(firebaseConfigWithSpaces.getBytes());
             FirebaseOptions options = new FirebaseOptions
                     .Builder()
                     .setCredentials(GoogleCredentials.fromStream(stream))
