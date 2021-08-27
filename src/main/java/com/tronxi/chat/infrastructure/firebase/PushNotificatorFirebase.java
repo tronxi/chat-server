@@ -28,7 +28,10 @@ public class PushNotificatorFirebase {
         String conversationName = retrieveName(conversation, sendMessageOrder.getSenderId());
         otherUserId.forEach(userId -> {
             notificationTokenRepository.findByUserId(userId)
-                    .ifPresent(notificationToken -> send(conversationName, sendMessageOrder.getMessage(), notificationToken.getToken()));
+                    .ifPresent(notificationToken -> {
+                        if(notificationToken.getToken() != null)
+                            send(conversationName, sendMessageOrder.getMessage(), notificationToken.getToken());
+                    });
         });
     }
 
