@@ -21,6 +21,7 @@ public class FirebaseConfiguration {
     public void initialize() {
         try {
             String firebaseConfigWithSpaces = firebaseConfig.replace("#", " ");
+            System.out.println(firebaseConfigWithSpaces);
             InputStream stream = new ByteArrayInputStream(firebaseConfigWithSpaces.getBytes());
             FirebaseOptions options = new FirebaseOptions
                     .Builder()
