@@ -9,9 +9,9 @@ import com.tronxi.chat.domain.port.primary.SendMessage;
 import com.tronxi.chat.domain.port.secondary.ConversationRepository;
 import com.tronxi.chat.domain.port.secondary.MessageEvent;
 import com.tronxi.chat.domain.port.secondary.MessageRepository;
+import com.tronxi.chat.domain.port.secondary.NotificationEvent;
 import com.tronxi.chat.domain.service.ConversationRetriever;
 import com.tronxi.chat.domain.service.UserRetriever;
-import com.tronxi.chat.infrastructure.firebase.PushNotificatorFirebase;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -27,7 +27,7 @@ public class SendMessageUseCase implements SendMessage {
     private final ConversationRepository conversationRepository;
     private final MessageRepository messageRepository;
     private final MessageEvent messageEvent;
-    private final PushNotificatorFirebase pushNotificatorFirebase;
+    private final NotificationEvent notificationEvent;
 
     @Override
     public void send(SendMessageOrder sendMessageOrder) {
@@ -45,7 +45,7 @@ public class SendMessageUseCase implements SendMessage {
 
         conversationRepository.save(conversation);
         messageEvent.send(conversation);
-        pushNotificatorFirebase.sendNotification(sendMessageOrder);
+        notificationEvent.sendNotification(sendMessageOrder);
     }
 
     private boolean checkUserInConversation(Conversation conversation, User user) {

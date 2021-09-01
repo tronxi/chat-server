@@ -7,6 +7,7 @@ import com.google.firebase.messaging.WebpushNotification;
 import com.tronxi.chat.domain.model.Conversation;
 import com.tronxi.chat.domain.model.User;
 import com.tronxi.chat.domain.model.sendmessage.SendMessageOrder;
+import com.tronxi.chat.domain.port.secondary.NotificationEvent;
 import com.tronxi.chat.domain.port.secondary.NotificationTokenRepository;
 import com.tronxi.chat.domain.service.ConversationRetriever;
 import lombok.RequiredArgsConstructor;
@@ -17,11 +18,12 @@ import java.util.stream.Collectors;
 
 @Component
 @RequiredArgsConstructor
-public class PushNotificatorFirebase {
+public class PushNotificatorFirebase implements NotificationEvent {
 
     private final ConversationRetriever conversationRetriever;
     private final NotificationTokenRepository notificationTokenRepository;
 
+    @Override
     public void sendNotification(SendMessageOrder sendMessageOrder) {
         Conversation conversation = conversationRetriever.findById(sendMessageOrder.getConversationId());
         List<String> otherUserId = retrieveOtherUsersInConversation(conversation, sendMessageOrder.getSenderId());
