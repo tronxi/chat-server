@@ -26,7 +26,7 @@ public class FirebaseConfiguration {
             JSONParser jsonParser = new JSONParser();
             String firebaseConfigWithSpaces = firebaseConfig.replace("#", " ");
             JSONObject jsonObject = (JSONObject) jsonParser.parse(firebaseConfigWithSpaces);
-            System.out.println(jsonObject.toJSONString());
+
             InputStream stream = new ByteArrayInputStream(jsonObject.toJSONString().getBytes());
             FirebaseOptions options = new FirebaseOptions
                     .Builder()
