@@ -5,7 +5,7 @@ spring:
     username: ${rabbitUser}
     password: ${rabbitPassword}
   datasource:
-    url: jdbc:mysql//${dbHost}:${dbPort}}/chat?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mysql://${dbHost}:${dbPort}/chat?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${dbUser}
     initialization-mode: ${dbInitializationMode}
