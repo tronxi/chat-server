@@ -1,0 +1,23 @@
+spring:
+  rabbitmq:
+    host: ${rabbitHost}
+    port: ${rabbitPort}
+    username: ${rabbitUser}
+    password: ${rabbitPassword}
+  datasource:
+    url: jdbc:mysql://${dbHost}:${dbPort}}/chat?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${dbUser}
+    initialization-mode: ${dbInitializationMode}
+    password: ${dbPassword}
+  jpa:
+    hibernate:
+      ddl-auto: ${dbDdlAuto}
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
