@@ -11,6 +11,7 @@ import com.tronxi.chat.domain.port.secondary.NotificationEvent;
 import com.tronxi.chat.domain.port.secondary.NotificationTokenRepository;
 import com.tronxi.chat.domain.service.ConversationRetriever;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.stream.Collectors;
 
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class PushNotificatorFirebase implements NotificationEvent {
 
     private final ConversationRetriever conversationRetriever;
@@ -62,6 +64,13 @@ public class PushNotificatorFirebase implements NotificationEvent {
                         .build())
                 .setToken(token)
                 .build();
-        FirebaseMessaging.getInstance().sendAsync(message);
+        try {
+            FirebaseMessaging firebaseMessaging = FirebaseMessaging.getInstance();
+            if(firebaseMessaging != null)
+                firebaseMessaging.sendAsync(message);
+        } catch (Exception e) {
+            log.info("error sending notification", e);
+        }
+
     }
 }
